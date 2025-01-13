@@ -7,6 +7,12 @@ void initChunk(Chunk* chunk) {
 	chunk->capacity = 0;
 	chunk->code = NULL;
 }
+
+void freeChunk(Chunk* chunk) {
+	FREE_ARRAY(unit*_t, chunk->code, chunk->capacity);
+	initChunk(chunk);
+}
+
 void writeChunk(Chunk* chunk, uint8_t byte) {
 	if(chunk->capacity < chunk->count + 1) {
 		int oldCapacity = chunk->capacity;
