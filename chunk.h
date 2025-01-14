@@ -10,7 +10,7 @@ typedef enum {
 typedef struct {
 	int count;
 	int capacity;
-	unit8_t* code;
+	uint8_t* code;
 } Chunk; //for storing other data
 
 void initChunk(Chunk* chunk);
