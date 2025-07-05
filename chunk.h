@@ -1,19 +1,10 @@
 #ifndef clox_chunk_h
 #define clox_chunk_h
 
-#include "headerstuff.h"
+#include "common.h"
 
 typedef enum {
 	OP_RETURN,
-} Opcode; //for instructions
+} OpCode;
 
-typedef struct {
-	int count;
-	int capacity;
-	uint8_t* code;
-} Chunk; //for storing other data
-
-void initChunk(Chunk* chunk);
-void freeChunk(Chunk* chunk);
-void writeChunk(Chunk* chunk, uint8_t byte);
 #endif
