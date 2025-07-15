@@ -9,7 +9,7 @@ void disassembleChunk(Chunk* chunk, const char* name) {
     offset = disassembleInstruction(chunk, offset);
   }
 }
-static int simpleInstrutction(const char * name, int offset){
+static int simpleInstruction(const char * name, int offset){
   printf("%s\n",name);
   return offset + 1;
 }
