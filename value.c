@@ -4,7 +4,7 @@
 #include "value.h"
 
 void initValueArray(ValueArray* array) {
-    array->value = NULL;
+    array->values = NULL;
     array->capacity = 0; 
     array->count = 0;
 }
